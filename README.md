@@ -39,12 +39,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Clone this project and open it in vsCode or other editor
 
-##Installing Dependencies
+## Installing Dependencies
+
 In project root directory, run command:
 
 ### npm install
 
-##Running Application
+## Running Application
+
 To run project, run command:
 
 ### npm run dev
