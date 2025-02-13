@@ -45,6 +45,18 @@ In project root directory, run command:
 
 ### npm install
 
+## Create Database
+
+Create your neonDb (postgresql) project and copy your connection string.
+Create .env file at root and paste db connection string.
+ex - DATABASE_URL="your_connection_string"
+
+## Run This Commands to configure db with your prisma
+
+### npx prisma migrate dev --name init
+
+### npx prisma generate
+
 ## Running Application
 
 To run project, run command:
