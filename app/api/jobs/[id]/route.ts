@@ -6,7 +6,7 @@ interface params {
 }
 
 export async function GET(req: NextRequest, { params }: params) {
-  const { id } = await params;
+  const { id } = params;
   const url = new URL(req.url);
   const userType = url.searchParams.get("userType");
   let job;
