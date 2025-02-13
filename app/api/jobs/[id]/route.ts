@@ -1,11 +1,10 @@
 import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
-interface params {
-  params: { id: string };
-}
-
-export async function GET(req: NextRequest, { params }: params) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
   const { id } = params;
   const url = new URL(req.url);
   const userType = url.searchParams.get("userType");
@@ -27,7 +26,10 @@ export async function GET(req: NextRequest, { params }: params) {
   return NextResponse.json({ status: 200, job });
 }
 
-export async function PUT(req: NextRequest, { params }: params) {
+export async function PUT(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
   const {
     job_title: title,
     job_description: description,
@@ -57,7 +59,10 @@ export async function PUT(req: NextRequest, { params }: params) {
   }
 }
 
-export async function DELETE(req: NextRequest, { params }: params) {
+export async function DELETE(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
   try {
     const job = await prisma.job.delete({
       where: {
